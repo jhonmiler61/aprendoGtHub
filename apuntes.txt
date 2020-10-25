@@ -1,0 +1,60 @@
+Objetos
+--------------
+
+type(5) => que tipo de elmento es
+
+VARIABLES -> Permite hacer que los programas sean mas comprensibles.
+= significa asignación
+ESCALARES
+a= 2
+x = 4
+z = (a*x)/2
+
+CADEMA
+
+'123'
+
+Repertir cadena '123'*3
+Concatenar cadena '123' + '52'
+('Hip' *3) + '  ' + 'hurra'
+f'{"Hip"*3} hurra'
+f'{var*3}  hurra'
+
+
+
+Funciones de cadenas 
+
+
+longitud = len(var)
+
+
+indexación = var[2]
+
+slicing(rebanadas)
+    my_string[comienzo:fin:pasos]
+    var[2:]
+
+>>> miler[2]
+'l'
+>>> miler[2:]
+'ler'
+>>> miler[:3]
+'mil'
+>>> miler[:-2]
+'mil'
+>>> miler[::2]
+'mlr'
+>>>
+
+ENTRADA - input
+------------
+nombre = input("Cual es tu nombre :  ")
+print('Tu nombre es', nombre)
+print(f'Tu nombre es {nombre}')
+
+>>> numero = int(input("Escribe un Numero  : "))
+Escribe un Numero  : 5
+
+
+nombre = input("ingrese su nombre : ")
+print(f'Hola {nombre} tu nombre tiene {len(nombre)} caracteres' )

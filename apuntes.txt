@@ -58,3 +58,17 @@ Escribe un Numero  : 5
 
 nombre = input("ingrese su nombre : ")
 print(f'Hola {nombre} tu nombre tiene {len(nombre)} caracteres' )
+
+Operadores Logicos
+----------------------
+2 ==3
+2!= 3
+2>3
+2<3
+2<=3
+2>=3
+
+Para hacer correr un programa
+python programaRamificado.py
+
+

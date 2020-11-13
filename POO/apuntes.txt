@@ -1,0 +1,159 @@
+TIPOS DE DATOS ABSTRACTOS
+EN Python todo es un objeto y tiene tipo: Representa datos y formas de interactuar con ellos.
+
+Formas de interactuar con un objeto:
+- Creación
+- Manipulación
+- Destrucción
+
+VENTAJAS
+........
+Descomposición
+Abstracción
+Encapsulación
+
+
+#definicion de clase
+
+class <nombre_De_la_clase> (<super_clase>):
+    def __init__(self, <params>):
+    <expresion>
+
+    def <nombre_del_metodo>(self, <params>):
+    <expresion>
+
+
+
+CLASE -> MOLDE
+OBJETO -> INSTANCIA DE LA CLASE
+
+INSTANCIA: Mientras que la clase e sun molde, a los objetos creados se les conoce como instancias.
+Cuando se crea una instancia, se ejecuta el metodo __init__
+Todos los métodos de una clase reciben implícitamente como primer parámetro self
+
+Los atributos de clase nos permite:
+Representar datos
+
+Procedimientos para interactuar con los mismos(métodos)
+Mecanismos para esconder la representación interna
+
+Se accede a los atributos con la notación de punto.
+Puede tener atributos privados. Por convención comienzan con _
+
+DESCOMPOSICIÓN 
+-------------------
+Partir un problema en problemas más pequeños 
+Las clases permiten crear mayores abstracciones en forma de componentes
+Coda clase se encarga de una parte del problema y el programa se vuelve más facil de entender
+
+ABSTRACCION
+______________
+
+Enfocarnos en la infirmación relevante.
+
+Separar información central de los detalles secundarios.
+
+Podemos utilizar variables y métodos (privados o públicos)
+
+ENCAPSULACIÓN Y getters and setters
+-----------------------------------
+
+Encapsulación
+
+. Permite agrupar datos y su comportamiento.
+. Controla el acceso a dicho datos.
+. Previene modificaciones no autorizadas.
+
+
+class CasillaDeVotacion:
+
+def __init__(self, identificador, pais)
+    self._identificador = identificador
+    self._pais = pais
+    self._region = None
+
+    @property
+    def region(self):
+        return self._region
+
+    @region.setter
+    def set_region(self, region):
+        if region in self._pais:
+            self._region = region
+
+        raise.valueError(f'La region {region} no es valida en {self._pais}')
+
+    casilla = CasillaDeVotacion(123, ['ciudad de Mexico', 'Morelos'])
+    casilla.region = 'Ciudad de Mexico'
+    >>>casilla.region
+    >>>'ciudad de Mexico'
+    
+    @property -> decoradores
+    ------------------------
+@property -> implementamos getters
+@region.setter -> implementamos setter
+
+HERENCIA
+----------
+Permite modelar una jerarquia de clases.
+Permite compartir comportamiento com{un en la jerarquía
+Al padre se le conoce como superclase y al hijo como subclase
+
+
+POLIMORFISMO
+_______________
+
+La habilidad de tomar varias formas
+En Python, nos permite cambiar el comportamiento de una superclase 
+para adaptarlo a la subclase
+
+
+NOTACIÓN ASINTÓTICA
+---------------------
+Crecimiento asintótico
+.........................
+
+No importan variaciones pequeñas
+El enfoque se centra en lo que pasa conforme el tamaño del problema se acerca al infinito.
+Mejor de los casos, promedio, peor de los casos
+Big O
+Nada más importa el término de mayor tamaño
+
+
+
+#Ley de la suma
+
+def f(n)
+    for i in range(n):
+        print(i)
+    
+    for i in range(n*n)
+        print(i)
+
+#O(n) +O(n) = O(n+n) = O(2n) = O(n)
+#O(n) +O(n*n) = O(n+n**2)= O(n**2)
+
+
+def fibonaci(n):
+    if n==0 or n ==1:
+        return 1
+    return fibonaci(n-1) + fibonaci (n-2)
+
+#O(2**n)
+
+clases de complejdiad algoritmica
+
+O(1) Constante
+O(n) Lineal
+O(logn) Logaritmico
+O(nlogn) Log Lineal
+O(N**2) Polinomial
+O(2**n) Exponencial
+ 
+
+BUSQUEDA Lineal
+................
+Busca todos los elementos de manera secuencial
+¿Cual es el Peor caso?
+
+

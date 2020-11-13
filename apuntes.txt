@@ -72,3 +72,209 @@ Para hacer correr un programa
 python programaRamificado.py
 
 
+
+ITERACIONES -> Loops
+
+
+Funciones----------
+
+def <nombre>(<parametros>):
+    <cuerpo>
+    return <expresion>
+
+
+def suma(a,b):
+    total = a+b
+    return total
+
+
+suma(2,3)
+
+
+def nombre_completo(nombre, apellidos, inverso=False):
+    if inverso:
+        return f'{apellido} {nombre}'
+    else:
+    return f'{nombre apellido}'
+
+nombre_completo('Jhon', 'Miler')
+nombre_completo('Jhon', 'Miler', inverso= True)
+nombre_completo(apelldio='Jhon', nombre='Miler')
+
+
+def func1(un_arg, una_func):
+    def func2(otro_arg):
+        return otro_arg *2
+    
+    valor = func2(un_arg)
+    return una_func(valor)
+
+un_arg = 1
+def cualquier_func(cualquier_arg)
+    return cualquier_arg+5
+
+func1(un_arg, cualquier_func)
+
+
+
+
+
+-> Que hace la Funcion
+-> Nombre y tipo del parametro que se espera
+-> Que es lo que regresa la Funcion
+def suma(a,b):
+    ""Suma de valores a y b
+    param int a cualquier entero
+    param int b cualquier entero
+    return la sumatoria de a y b
+    ""
+    total = a+b
+    return total
+
+
+RECURSIVIDAD
+------------
+Algoritmica: Divide y venceras
+Programatica: Una funcion se llama a si misma
+
+
+----------------------------
+OTRA FORMA DE EXPRESAR FUNCION
+
+sumar = lambda x,y:x+y
+sumar(2,3)
+
+Funciones en estrucutra de datos
+----------------------------
+
+def aplicar_operaciones(num)
+    operaciones =  [abs, float]
+    resultado =[]
+    for operaion int operaciones:
+        resultado.append(operacion(num))
+    return resultado
+
+
+aplicar_operaciones(-2)
+[2,-2.0 ]
+
+RANGOS
+-------------
+Representa una secuencia de enteros
+range(comienzo, fin, pasos)
+Al igual que las cadenas y tuplas son inmutables
+Mas eficientes en el uso de memoria
+
+range(comiezo,fin, pasos)
+
+LISTAS Y MUTABILIDAD
+.......................
+Son secuencias de objetis, pero a diferencia de tuplas, si son mutables
+Cuando modificas una lista puede existir efectos secundarios(side effects)
+Es posible iterrar con ellas
+
+Para modificar una lista
+Asignar via indice mi_lista[0]=5
+Utilizar los metodos de la lista append, pop, remove, insert,etc
+
+
+DICCIONARIOS
+------------
+
+Son como listas, pero en lugar de usar indices utilizan llaves
+No tienen orden interno
+Los diccionarios son mutables
+Pueden iterarse
+
+
+
+PRUEBAS DE CAJA NEGRA
+-----------------------
+Pruebas de caja negra, se basan en la especificacion de la funcion o el programa.
+Prueba inputs y valida outputs
+Unit testing o integration testing
+
+PRUEBAS DE CAJA DE CRISTAL
+...........................
+Se basan en el flujo del programa.
+Prueba todos los caminos posibles de una funcion, ramificaciones, bucles for y while, recursión.
+Regression testing o mocks.
+
+
+DEBUGGING
+..........
+Reglas Generales:
+No te molestes con el debugger, Aprende a utilizar el print statement
+Estudia los datos diponibles
+Utiliza los datos para crear hipotesis y experimentos del metodo cientifico
+Ten una mente abierta. Si entendieras el programa, probablemente no habrian bugs.
+Lleva un registro de lo que has tratado, preferentemento en forma de tests
+
+Diseño de experimentos
+.......................
+Debugear es un proceso de busqueda. Cada prueba debe acotar el espacio de busqueda.
+Busqueda binaria con print statements
+
+
+Errores comunes
+...............
+Encuentra los sopechosos comunes, datos ingresados correctos, no inicializar, comparación de diferentes tipo
+En lugar de preguntarte por qué no funcion, preguntate por qué está funcionando de esta manera.
+Es posible que el bug no se encuentre donde crees que está.
+Explicale el programa a otra persona. De preferencia que n tenga contexto.
+Lleva un registro de lo que has tratado, preferentemente en la forma de tests.
+vete a dormir.
+No te rindas ni frustres
+
+
+MANEJO DE EXCEPCIONES
+---------------------
+Son muy comunes.
+Las excepciones de Python se relacionan con errores de semantica
+Se pueden crear excepciones propias
+Cuando una excepcion no se maneja, el programa termina en errores
+
+Manejo de excepciones
+......................
+
+try, except, finally.
+Se pueden utilizar para ramificar programas
+No deben manejarse de anera silenciosa, solo con print statement
+Para aventar tu propia excepcion utiliza el keyword raise
+
+AFIRMACIONES
+-------------------
+Programacion defensiva
+Pueden utilizarse para verificar que los tipos sean correctos en una funcion
+Tambien sirven para debuguear
+
+
+def primera_letra(lista_de_palabras):
+    primeras_letras = []
+
+    for palabra in lista_de_palabras:
+        assert type(palabra) ==str, f'{palabra} no es str'
+        assert len(palabra) > 0, 'No se permiten str vacios'
+
+        primeras_letras.append(palabra[0])
+
+    return primeras_letras
+
+
+    INTRODUCCIÓN A LA COMPLEJIDAD ALGORÍTMICA
+    ------------------------------------------
+
+¿Por qué comparamos la eficiencia de un algoritmo?
+Complejidad temporal vs complejidad espacial
+Podemos definirla como T(n)
+
+Aproximaciones
+...............
+Cronometrar el tiempo en el que corre un algoritmo
+Contar los pasos con una medida abstracta de operacion
+Contar los pasos conforme nos aproximamos al infinito
+
+
+
+
+
